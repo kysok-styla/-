@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АИС «Электронная библиотека» | 09.02.01</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>АИС «Электронная библиотека»</h1>
+    <p>Модификация для специальности 09.02.01 Компьютерные системы и комплексы</p>
+  </header>
+
+  <main>
+    <!-- Модуль 1: Семантический поиск (п. 2.3 диплома) -->
+    <section class="card">
+      <h2>🔍 Семантический поиск стандартов</h2>
+      <div class="input-group">
+        <input type="text" id="searchInput" placeholder="Например: ГОСТ 2.105-2019 или оформление">
+        <button id="searchBtn">Найти</button>
+      </div>
+      <div id="searchResults" class="results"></div>
+    </section>
+
+    <!-- Модуль 2: Предпросмотр технических форматов (п. 2.4 диплома) -->
+    <section class="card">
+      <h2>📐 Предпросмотр технических форматов</h2>
+      <p class="hint">Конвертация DWG/DXF → SVG выполняется асинхронно</p>
+      <div class="preview-controls">
+        <button data-id="dwg1">Чертеж вала (DWG)</button>
+        <button data-id="dwg2">Схема узла (DWG)</button>
+      </div>
+      <div id="previewContainer" class="preview-box">
+        <p class="hint">Выберите файл для предпросмотра</p>
+      </div>
+      <div id="latexDemo" class="latex-box"></div>
+    </section>
+
+    <!-- Модуль 3: Привязка к учебному плану (п. 2.5 диплома) -->
+    <section class="card">
+      <h2>📚 Привязка к учебному плану</h2>
+      <div class="input-group">
+        <select id="semesterSelect">
+          <option value="3">3 семестр</option>
+          <option value="4" selected>4 семестр</option>
+          <option value="5">5 семестр</option>
+        </select>
+        <button id="loadCurriculum">Загрузить материалы</button>
+      </div>
+      <ul id="curriculumList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Выпускная квалификационная работа | Клепиков А. М. гр. КС-41 | 2026</p>
+  </footer>
+</body>
+</html>
