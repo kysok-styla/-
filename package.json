@@ -1,0 +1,16 @@
+{
+  "name": "diplom-library",
+  "version": "1.0.0",
+  "description": "Modified Library Information System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["library", "education", "technical"],
+  "author": "Vyazin Ruslan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
